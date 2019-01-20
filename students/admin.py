@@ -9,8 +9,7 @@ class StudentInline(admin.TabularInline):
     model = Student
 
 
-    list_display = ('first_name', 'last_name', 'parent')
-
+list_display = ('first_name', 'last_name', 'parent')
 
 
 class ParentAdmin(admin.ModelAdmin):
@@ -28,4 +27,3 @@ admin.site.register(Student, StudentAdmin)
 admin.site.register(Parent, ParentAdmin)
 admin.site.unregister(User)
 admin.site.unregister(Group)
-

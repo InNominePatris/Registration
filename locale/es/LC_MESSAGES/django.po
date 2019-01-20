@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-13 11:37-0600\n"
+"POT-Creation-Date: 2019-01-20 13:06-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\students\models.py:17
+#: .\courses\models.py:17
+msgid "Morning"
+msgstr ""
+
+#: .\courses\models.py:18
+msgid "Evening"
+msgstr ""
+
+#: .\courses\models.py:19
+msgid "Night"
+msgstr ""
+
+#: .\professors\models.py:11 .\students\models.py:12 .\students\models.py:34
 msgid "Female"
 msgstr "Femenino"
 
-#: .\students\models.py:18
+#: .\professors\models.py:12 .\students\models.py:13 .\students\models.py:35
 msgid "Male"
 msgstr "Masculino"
+
+#: .\students\apps.py:8
+msgid "Students"
+msgstr "Estudiantes"
+
+#: .\students\models.py:16
+msgid "First name"
+msgstr "Primer nombre"
+
+#: .\students\models.py:25
+msgid "Parents"
+msgstr "Padres"
+
+#: .\students\models.py:26
+msgid "Parent"
+msgstr "Padre"

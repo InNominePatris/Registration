@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'students',
+    'students.apps.StudentsConfig',
     'enrollments',
-    'Grades'
+    'grades',
+    'professors',
+    'courses',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +135,5 @@ STATIC_URL = '/static/'
 LOCALE_PATHS = [
        join(BASE_DIR, 'locale')
    ]
+
+PHONENUMBER_DB_FORMAT = 'E164'
