@@ -13,10 +13,12 @@ class Parent(models.Model):
         (GENDER_MALE, _('Male'))
     )
 
-    first_name = models.CharField(max_length=50,verbose_name=_('First name'))
-    last_name = models.CharField(max_length=50)
-    age = models.IntegerField()
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    first_name = models.CharField(max_length=50, verbose_name=_('First name'))
+    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
+    age = models.IntegerField(verbose_name=_('Age'),
+                              validators=[MinValueValidator(0), MaxValueValidator(100)]
+                              )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
@@ -35,19 +37,23 @@ class Student(models.Model):
         (GENDER_MALE, _('Male'))
     )
 
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    age = models.IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(5)]
-    )
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    first_name = models.CharField(max_length=50, verbose_name=_('First_name'))
+    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
+    age = models.IntegerField(verbose_name=_('Age'),
+                              validators=[MinValueValidator(0), MaxValueValidator(100)]
+                              )
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
     parent = models.ForeignKey(
         Parent,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, verbose_name=_('Padre')
     )
-    birthday = models.DateField()
-    address = models.CharField(max_length=50)
-    phone = PhoneNumberField()
+    birthday = models.DateField(verbose_name=_('Birthday'))
+    address = models.CharField(max_length=50, verbose_name=_('Address'))
+    phone = PhoneNumberField(verbose_name=_('Phone'))
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
+
+    class Meta:
+        verbose_name_plural = _('Students')
+        verbose_name = _('Student')

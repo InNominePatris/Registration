@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-20 13:06-0600\n"
+"POT-Creation-Date: 2019-01-20 16:25-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,117 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\courses\apps.py:9 .\courses\models.py:29
+msgid "Courses"
+msgstr "Cursos"
+
 #: .\courses\models.py:17
 msgid "Morning"
-msgstr ""
+msgstr "Matutino"
 
 #: .\courses\models.py:18
 msgid "Evening"
-msgstr ""
+msgstr "Vespertino"
 
 #: .\courses\models.py:19
 msgid "Night"
-msgstr ""
+msgstr "Nocturno"
 
-#: .\professors\models.py:11 .\students\models.py:12 .\students\models.py:34
+#: .\courses\models.py:22
+msgid "Type"
+msgstr "Tipo"
+
+#: .\courses\models.py:24
+msgid "Grade"
+msgstr "Grado"
+
+#: .\courses\models.py:25
+msgid "Professor"
+msgstr "Profesor"
+
+#: .\courses\models.py:26
+msgid "Registration"
+msgstr "Registro"
+
+#: .\courses\models.py:30
+msgid "Course"
+msgstr "Curso"
+
+#: .\enrollments\apps.py:8 .\enrollments\models.py:15
+msgid "Enrollments"
+msgstr "Inscripciones"
+
+#: .\enrollments\models.py:7
+msgid "Date"
+msgstr "Fecha"
+
+#: .\enrollments\models.py:8
+msgid "Is_active"
+msgstr "Activo"
+
+#: .\enrollments\models.py:9 .\students\models.py:59
+msgid "Student"
+msgstr "Estudiante"
+
+#: .\enrollments\models.py:16
+msgid "Enrollment"
+msgstr "Inscripción"
+
+#: .\grades\apps.py:8
+#, fuzzy
+#| msgid "Grade"
+msgid "Grades"
+msgstr "Grado"
+
+#: .\grades\models.py:6 .\grades\models.py:13
+msgid "Name"
+msgstr "Nombre"
+
+#: .\grades\models.py:14
+msgid "Assignature"
+msgstr "Asignatura"
+
+#: .\professors\apps.py:8
+msgid "Professors"
+msgstr "Profesores"
+
+#: .\professors\models.py:11 .\students\models.py:12 .\students\models.py:36
 msgid "Female"
 msgstr "Femenino"
 
-#: .\professors\models.py:12 .\students\models.py:13 .\students\models.py:35
+#: .\professors\models.py:12 .\students\models.py:13 .\students\models.py:37
 msgid "Male"
 msgstr "Masculino"
 
-#: .\students\apps.py:8
+#: .\professors\models.py:15
+msgid "First_Name"
+msgstr "Primer nombre"
+
+#: .\professors\models.py:16
+msgid "Last_name"
+msgstr "Apellidos"
+
+#: .\professors\models.py:17 .\students\models.py:18 .\students\models.py:42
+msgid "Age"
+msgstr "Edad"
+
+#: .\professors\models.py:18 .\students\models.py:21 .\students\models.py:45
+msgid "Gender"
+msgstr "Género"
+
+#: .\professors\models.py:19
+msgid "Birth"
+msgstr "Fecha de Nac"
+
+#: .\professors\models.py:20 .\students\models.py:51
+msgid "Address"
+msgstr "Dirección"
+
+#: .\professors\models.py:21 .\students\models.py:52
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\students\apps.py:8 .\students\models.py:58
 msgid "Students"
 msgstr "Estudiantes"
 
@@ -46,10 +136,26 @@ msgstr "Estudiantes"
 msgid "First name"
 msgstr "Primer nombre"
 
-#: .\students\models.py:25
+#: .\students\models.py:17 .\students\models.py:41
+msgid "Second_name"
+msgstr "Apellidos"
+
+#: .\students\models.py:27
 msgid "Parents"
 msgstr "Padres"
 
-#: .\students\models.py:26
+#: .\students\models.py:28
 msgid "Parent"
 msgstr "Padre"
+
+#: .\students\models.py:40
+msgid "First_name"
+msgstr "Primer nombre"
+
+#: .\students\models.py:48
+msgid "Padre"
+msgstr "Padre"
+
+#: .\students\models.py:50
+msgid "Birthday"
+msgstr "Fecha de Nac"
