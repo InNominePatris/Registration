@@ -14,7 +14,7 @@ class Assignature(models.Model):
 
 
 class Grade(models.Model):
-    name = models.CharField(max_length=50, verbose_name=_('Name'))
+    name = models.CharField(max_length=50, verbose_name=_('Name'), unique=True)
     Assignature = models.ManyToManyField(Assignature, verbose_name=_('Assignature'))
 
     def __str__(self):

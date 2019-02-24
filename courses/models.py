@@ -20,7 +20,6 @@ class Course(models.Model):
     )
 
     type = models.CharField(max_length=1, choices=TYPE_CHOICES, verbose_name=_('Type'))
-
     grade = models.ManyToManyField(Grade, verbose_name=_('Grade'))
     professor = models.ManyToManyField(Professor, verbose_name=_('Professor'))
     registration = models.ManyToManyField(Registration, verbose_name=_('Registration'))
@@ -31,5 +30,3 @@ class Course(models.Model):
     class Meta:
         verbose_name_plural = _('Courses')
         verbose_name = _('Course')
-
-
