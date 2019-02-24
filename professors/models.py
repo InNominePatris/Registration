@@ -20,15 +20,13 @@ class Professor(models.Model):
                               )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
     birth = models.DateField(verbose_name=_('Birth'))
-    address = models.CharField(max_length=50, verbose_name=_('Address'))
-    phone = models.CharField(max_length=20, verbose_name=_('Phone'))
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
 
     class Meta:
-        verbose_name_plural = 'Professors'
-        verbose_name = 'Professor'
+        verbose_name_plural = _('Professors')
+        verbose_name = _('Professor')
 
 
 

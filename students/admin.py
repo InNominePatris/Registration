@@ -20,9 +20,6 @@ class StudentAdmin(admin.ModelAdmin):
     inlines = [RegisterInline]
 
 
-LogEntry.objects.all().delete()
-
-
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Parent, ParentAdmin)
 admin.site.unregister(User)

@@ -40,10 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'students.apps.StudentsConfig',
-    'enrollments',
-    'grades',
-    'professors',
-    'courses',
+    'enrollments.apps.EnrollmentsConfig',
+    'grades.apps.GradesConfig',
+    'professors.apps.ProfessorsConfig',
+    'courses.apps.CoursesConfig',
     'phonenumber_field'
 ]
 

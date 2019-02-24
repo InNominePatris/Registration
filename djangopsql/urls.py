@@ -21,5 +21,5 @@ urlpatterns = [
 ]
 
 admin.site.site_header = "Login"
-admin.site.site_title = "SCHOOL"
-admin.site.index_title = "Welcome to the Site Register"
+admin.site.site_title = "UNIVERSIDAD"
+admin.site.index_title = "Bienvenido al registro de estudiantes de Ingeniería en sistemas"

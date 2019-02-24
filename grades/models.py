@@ -9,6 +9,11 @@ class Assignature(models.Model):
         return '{}'.format(self.name)
 
 
+class Meta:
+    verbose_name_plural = _('Assignatures')
+    verbose_name = _('Assignature')
+
+
 class Grade(models.Model):
     name = models.CharField(max_length=50, verbose_name=_('Name'))
     Assignature = models.ManyToManyField(Assignature, verbose_name=_('Assignature'))
@@ -17,5 +22,5 @@ class Grade(models.Model):
         return '{}'.format(self.name)
 
     class Meta:
-        verbose_name_plural = 'Grades'
-        verbose_name = 'Grade'
+        verbose_name_plural = _('Grades')
+        verbose_name = _('Grade')

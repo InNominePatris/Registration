@@ -10,7 +10,7 @@ from grades.models import Grade
 class Course(models.Model):
 
     TYPE_MORNING = 'M'
-    TYPE_EVENING = 'E'
+    TYPE_EVENING = 'T'
     TYPE_NIGHT = 'N'
 
     TYPE_CHOICES = (

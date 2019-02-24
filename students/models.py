@@ -15,9 +15,10 @@ class Parent(models.Model):
 
     first_name = models.CharField(max_length=50, verbose_name=_('First name'))
     last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
-    age = models.IntegerField(verbose_name=_('Age'),
-                              validators=[MinValueValidator(0), MaxValueValidator(100)]
-                              )
+    age = models.IntegerField(
+        verbose_name=_('Age'),
+        validators=[MinValueValidator(35), MaxValueValidator(100)]
+    )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
 
     def __str__(self):
@@ -39,9 +40,10 @@ class Student(models.Model):
 
     first_name = models.CharField(max_length=50, verbose_name=_('First_name'))
     last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
-    age = models.IntegerField(verbose_name=_('Age'),
-                              validators=[MinValueValidator(0), MaxValueValidator(100)]
-                              )
+    age = models.IntegerField(
+        verbose_name=_('Age'),
+        validators=[MinValueValidator(18), MaxValueValidator(50)]
+    )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
     parent = models.ForeignKey(
         Parent,

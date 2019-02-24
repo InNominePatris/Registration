@@ -2,8 +2,7 @@ from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
 
-class CourseConfig(AppConfig):
+class CoursesConfig(AppConfig):
     name = 'courses'
 
-
-verbose_name = _('Courses')
+    verbose_name = _('Courses')
