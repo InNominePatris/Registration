@@ -8,10 +8,9 @@ class Assignature(models.Model):
     def __str__(self):
         return '{}'.format(self.name)
 
-
-class Meta:
-    verbose_name_plural = _('Assignatures')
-    verbose_name = _('Assignature')
+    class Meta:
+        verbose_name_plural = _('Assignatures')
+        verbose_name = _('Assignature')
 
 
 class Grade(models.Model):
