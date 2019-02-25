@@ -13,8 +13,8 @@ class Parent(models.Model):
         (GENDER_MALE, _('Male'))
     )
 
-    first_name = models.CharField(max_length=50, verbose_name=_('First name'))
-    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
+    first_name = models.CharField(max_length=50, verbose_name=_('First name'), unique=True)
+    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'), unique=True)
     age = models.IntegerField(
         verbose_name=_('Age'),
         validators=[MinValueValidator(35), MaxValueValidator(100)]
@@ -38,8 +38,8 @@ class Student(models.Model):
         (GENDER_MALE, _('Male'))
     )
 
-    first_name = models.CharField(max_length=50, verbose_name=_('First_name'))
-    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'))
+    first_name = models.CharField(max_length=50, verbose_name=_('First_name'), unique=True)
+    last_name = models.CharField(max_length=50, verbose_name=_('Second_name'), unique=True)
     age = models.IntegerField(
         verbose_name=_('Age'),
         validators=[MinValueValidator(18), MaxValueValidator(50)]
