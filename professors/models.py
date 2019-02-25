@@ -13,10 +13,10 @@ class Professor(models.Model):
         (GENDER_MALE, _('Male'))
     )
 
-    first_name = models.CharField(max_length=50, verbose_name=_('First_Name'))
-    last_name = models.CharField(max_length=50, verbose_name=_('Last_name'))
+    first_name = models.CharField(max_length=50, verbose_name=_('First_Name'), unique=True)
+    last_name = models.CharField(max_length=50, verbose_name=_('Last_name'), unique=True)
     age = models.IntegerField(verbose_name=_('Age'),
-                              validators=[MinValueValidator(0), MaxValueValidator(100)]
+                              validators=[MinValueValidator(23), MaxValueValidator(60)]
                               )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, verbose_name=_('Gender'))
     birth = models.DateField(verbose_name=_('Birth'))
