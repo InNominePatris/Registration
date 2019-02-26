@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Assignature(models.Model):
-    name = models.CharField(max_length=50, verbose_name=_('Name'),unique=True)
+    name = models.CharField(max_length=50, verbose_name=_('Name'), unique=True)
 
     def __str__(self):
         return '{}'.format(self.name)
