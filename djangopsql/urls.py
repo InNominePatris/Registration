@@ -22,4 +22,4 @@ urlpatterns = [
 
 admin.site.site_header = "Login"
 admin.site.site_title = "UNIVERSIDAD"
-admin.site.index_title = "Bienvenido al registro de estudiantes de Ingeniería en sistemas"
+admin.site.index_title = "Bienvenido al registro de estudiantes de Ingeniería"
