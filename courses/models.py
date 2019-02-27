@@ -9,9 +9,9 @@ from grades.models import Grade
 
 class Course(models.Model):
 
-    TYPE_MORNING = 'M'
-    TYPE_EVENING = 'T'
-    TYPE_NIGHT = 'N'
+    TYPE_MORNING = 'Mañana'
+    TYPE_EVENING = 'Tarde'
+    TYPE_NIGHT = 'Noche'
 
     TYPE_CHOICES = (
         (TYPE_MORNING, _('Morning')),
@@ -19,7 +19,7 @@ class Course(models.Model):
         (TYPE_NIGHT, _('Night')),
     )
 
-    type = models.CharField(max_length=1, choices=TYPE_CHOICES, verbose_name=_('Type'))
+    type = models.CharField(max_length=6, choices=TYPE_CHOICES, verbose_name=_('Type'))
     grade = models.ManyToManyField(Grade, verbose_name=_('Grade'))
     professor = models.ManyToManyField(Professor, verbose_name=_('Professor'))
     registration = models.ManyToManyField(Registration, verbose_name=_('Registration'))
